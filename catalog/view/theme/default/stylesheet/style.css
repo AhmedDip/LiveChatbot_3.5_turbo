@@ -1,0 +1,195 @@
+body, textarea {
+    font-family: 'Roboto', sans-serif;
+}
+
+#message-input {
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px #515170;
+    margin: 20px auto;
+    outline: none;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 85%;
+    max-width: 500px;
+    margin-left: 58px;
+    border: none;
+    color: #fff;
+    background-color: #1a1919;
+    padding-top: 10px;
+    font-size: 1.1em;
+    padding-left: 15px;
+    margin-top:15px;
+    line-height: 15px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+
+#chat-messages {
+    height: calc( 100% - 150px );
+    overflow: auto;
+    width: 98%;
+    max-width: 550px;
+    text-align: left;
+    margin: 0 auto;
+    margin-top: -15px;
+    margin-bottom:20px;
+}
+
+.chat-message {
+    border-radius: 15px;
+    padding: 5px 15px;
+    margin: 10px 0;
+    line-height: 1.5em;
+    overflow:auto;
+}
+
+.incoming-message {
+    color: #ffffff;
+    background-image: linear-gradient(155deg, #2a27dab8 0%, rgba(0, 204, 255, 0.72) 100%);
+    margin-left: 25px;
+    margin-right: 22px;
+    padding-top: 10px;
+    border-bottom-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 45px
+}
+
+.outgoing-message {
+    color: #000000;
+    background-image: linear-gradient(to right, #f8c670, #ffd903);
+    padding-top: 10px;
+    margin-left: 25px;
+    margin-right: 22px;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 3px;
+    border-bottom-left-radius: 0px;
+}
+
+ /* #message-input {
+    margin: 20px auto;
+    border: none;
+    color: #fff;
+    background-color: #000000;
+    outline: none;
+    padding: 10px 55px;
+    font-size: 1.1em;
+    margin-top: 20px;
+    margin-left: 337px;
+    width: 85%;
+    max-width: 500px;
+    padding-left: 15px;
+}  */
+
+.ask {
+    color: #fff;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+code {
+    border-radius: 10px;
+    font-size: 1.1em;
+    margin: 5px;
+}
+
+#cursor {
+    width: 5px;
+    height: 18px;
+    background-color: #fff;
+    display: inline-block;
+    animation: blink .5s infinite;
+}
+
+.modal-dialog{
+    overflow-y: initial !important;
+
+}
+.modal-body{
+    height: 80vh;
+    overflow-y: auto;
+}
+
+.design
+{
+  margin-left: 60px;
+  margin-right: 60px;
+  border-radius: 8px;
+}
+
+
+.modal-head
+{
+  color: #ffffff;
+  background-image: linear-gradient(155deg, #2a27dab8 0%, rgba(0, 204, 255, 0.72) 100%);
+  padding-top: 3px;
+  padding-bottom: 20px;
+  border-radius: 7px;
+}
+@keyframes blink {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;  
+}
+
+.mod-body
+{
+  /* background-image: url("https://mir-s3-cdn-cf.behance.net/project_modules/disp/aec89173426833.5c08f56351139.png"); */
+  margin-left: 20px;
+  margin-right: 20px;
+ 
+}
+
+.bt-shake {
+    position: relative;
+    animation-name: shakeAnim;
+    animation-duration: 1s;
+    animation-iteration-count: infinite; ;
+    animation-timing-function: ease-in;
+  }
+
+
+
+  @keyframes shakeAnim {
+    0% {
+      left: 0
+    }
+    10% {
+      left: -3px
+    }
+    20% {
+      left: 3px
+    }
+    30% {
+      left: -8px
+    }
+    40% {
+      left: 8px
+    }
+    50% {
+      left: -5px
+    }
+    60% {
+      left: 3px
+    }
+    70% {
+      left: 0
+    }
+}
+
+

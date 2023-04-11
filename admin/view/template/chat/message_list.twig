@@ -1,0 +1,52 @@
+{{ header }}{{ column_left }}
+<div id="content">
+  <div class="page-header">
+    <div class="container-fluid">
+      <h1>{{ heading_title }}</h1>
+    </div>
+  </div>
+{% block content %}
+<div class="container-fluid">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title"><i class="fa fa-list"></i> {{ heading_title }}</h3>
+    </div>
+    <div class="panel-body">
+      {% if messages %}
+      <table class="table table-bordered table-hover">
+        <thead>
+          <tr>
+            <td class="text-center">Id</td>
+            <td class="text-center">Product Id</td>
+            <td class="text-center">Product Name</td>
+            <td class="text-center">User Message</td>
+             <td class="text-left">Bot Message</td>
+            <td class="text-center">Date</td>
+            {# <td class="text-right">Action</td> #}
+          </tr>
+        </thead>
+        <tbody>
+         {% for chat in messages %}
+         <tr>
+            <td>{{ chat.id }}</td>
+            <td>{{ chat.product_id}}</td>
+            <td>{{ chat.pname}}</td>
+            <td>{{ chat.user_message }}</td>
+            <td>{{ chat.bot_message }}</td>
+            <td>{{chat.date_added}}</td>
+            {# <td class="text-right"><a href="{{ chat_message.edit_url }}" class="btn btn-primary"><i class="fa fa-pencil"></i> Edit</a></td> #}
+          {% endfor %}
+        </tbody>
+      </table>
+      {% else %}
+      <p class="text-center">{{ text_no_results }}</p>
+      {% endif %}
+    </div>
+
+    <div class="row">
+  <div class="col-sm-6 text-left">{{ pagination }}</div>
+  <div class="col-sm-6 text-right">{{ results }}</div>
+</div>
+  </div>
+</div>
+{% endblock %}

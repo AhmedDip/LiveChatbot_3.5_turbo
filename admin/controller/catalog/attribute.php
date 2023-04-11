@@ -76,6 +76,7 @@ class ControllerCatalogAttribute extends Controller {
 		$this->getForm();
 	}
 
+	
 	public function delete() {
 		$this->load->language('catalog/attribute');
 

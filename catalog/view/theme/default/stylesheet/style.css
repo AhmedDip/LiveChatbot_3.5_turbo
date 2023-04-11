@@ -55,7 +55,7 @@ body, textarea {
     padding-top: 10px;
     border-bottom-left-radius: 0px;
     border-top-right-radius: 0px;
-    border-bottom-right-radius: 45px
+    border-bottom-right-radius: 20px
 }
 
 .outgoing-message {
@@ -64,7 +64,7 @@ body, textarea {
     padding-top: 10px;
     margin-left: 25px;
     margin-right: 22px;
-    border-top-left-radius: 25px;
+    border-top-left-radius: 12px;
     border-top-right-radius: 3px;
     border-bottom-left-radius: 0px;
 }

@@ -16,6 +16,8 @@ class ControllerCommonColumnLeft extends Controller {
 				'children' => array()
 			);
 
+		
+
 			// Catalog
 			$catalog = array();
 
@@ -706,6 +708,15 @@ class ControllerCommonColumnLeft extends Controller {
 			} else {
 				$data['statistics_status'] = false;
 			}
+
+				// add chat menu
+				$data['menus'][] = array(
+					'id'       => 'menu-chat',
+					'icon'	   => 'fa-comments',
+					'name'	   => $this->language->get('Chat Messages List'),
+					'href'     => $this->url->link('chat/message', 'user_token=' . $this->session->data['user_token'], true),
+					'children' => array()
+				);
 
 			return $this->load->view('common/column_left', $data);
 		}

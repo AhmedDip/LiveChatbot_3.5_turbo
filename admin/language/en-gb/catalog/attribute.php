@@ -1,6 +1,6 @@
 <?php
 // Heading
-$_['heading_title']          = 'Attributes';
+$_['heading_title']          = 'Test';
 
 // Text
 $_['text_success']           = 'Success: You have modified attributes!';

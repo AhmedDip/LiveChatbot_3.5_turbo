@@ -186,9 +186,31 @@
                 </table>
               </div>
             </form>
-            <div class="row">
-              <div class="col-sm-6 text-left">{{ pagination }}</div>
-              <div class="col-sm-6 text-right">{{ results }}</div>
+             {% if pagination %}
+  <div class="pagination">
+    <ul>
+      {% if pagination.previous %}
+        <li><a href="{{ pagination.previous }}">Previous</a></li>
+      {% endif %}
+      {% for page in pagination.pages %}
+        {% if page.url %}
+          {% if page.current %}
+            <li class="active"><span>{{ page.text }}</span></li>
+          {% else %}
+            <li><a href="{{ page.url }}">{{ page.text }}</a></li>
+          {% endif %}
+        {% else %}
+          <li class="disabled"><span>{{ page.text }}</span></li>
+        {% endif %}
+      {% endfor %}
+      {% if pagination.next %}
+        <li><a href="{{ pagination.next }}">Next</a></li>
+      {% endif %}
+    </ul>
+  </div>
+{% endif %}      <div class="row">
+      
+
             </div>
           </div>
         </div>
